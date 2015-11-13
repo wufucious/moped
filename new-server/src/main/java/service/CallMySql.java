@@ -15,9 +15,13 @@ public class CallMySql {
      public Connection con = null;
      public Statement st = null;
 
-    private String url = PropertyAPI.getInstance().getProperty("db_location");
-    private String user = PropertyAPI.getInstance().getProperty("db_user");
-    private String password = PropertyAPI.getInstance().getProperty("db_password");
+    // private String url = PropertyAPI.getInstance().getProperty("db_location");
+    // private String user = PropertyAPI.getInstance().getProperty("db_user");
+    // private String password = PropertyAPI.getInstance().getProperty("db_password");
+    private String url = "jdbc:mysql://localhost:3306/fresta2";
+    private String user = "fresta";
+    private String password = "fresta";
+
 
      public CallMySql() {
 
@@ -36,7 +40,7 @@ public class CallMySql {
     }
 
     public String getOne(String query, Boolean warn) {
-	
+
 	 ResultSet rs = null;
 
 	 checkdb();
@@ -99,7 +103,7 @@ public class CallMySql {
      }
 
      public String [] getOneSet(String query) {
-	
+
 	 checkdb();
 
 	 ResultSet rs = null;
@@ -146,7 +150,7 @@ public class CallMySql {
      }
 
      public ResultSet getResults(String query) {
-	
+
 	 checkdb();
 
 	 ResultSet rs = null;
@@ -193,7 +197,7 @@ public class CallMySql {
 
 
      public MySqlIterator getIterator(String query) {
-	
+
 	 ResultSet rs = null;
 
 	 checkdb();
