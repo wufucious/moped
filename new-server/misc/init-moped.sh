@@ -34,7 +34,9 @@ EOF
 
 fi
 
-PYTHONPATH=~/moped python <<EOF
+echo "fresta2 setup"
+
+PYTHONPATH=/home/arndt/moped/moped/ python <<EOF
 from suds.client import Client
 url='http://localhost:9990/moped/pws?wsdl'
 client = Client(url)
