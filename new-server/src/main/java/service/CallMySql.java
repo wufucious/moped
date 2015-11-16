@@ -15,12 +15,12 @@ public class CallMySql {
      public Connection con = null;
      public Statement st = null;
 
-    // private String url = PropertyAPI.getInstance().getProperty("db_location");
-    // private String user = PropertyAPI.getInstance().getProperty("db_user");
-    // private String password = PropertyAPI.getInstance().getProperty("db_password");
-    private String url = "jdbc:mysql://localhost:3306/fresta2";
-    private String user = "fresta";
-    private String password = "fresta";
+     private String url = PropertyAPI.getInstance().getProperty("db_location");
+     private String user = PropertyAPI.getInstance().getProperty("db_user");
+     private String password = PropertyAPI.getInstance().getProperty("db_password");
+    //private String url = "jdbc:mysql://localhost:3306/fresta2";
+    //private String user = "fresta";
+    //private String password = "fresta";
 
 
      public CallMySql() {
