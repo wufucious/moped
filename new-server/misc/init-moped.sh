@@ -17,7 +17,7 @@ USERDUMP=~/moped/wp_users.dump
 
 USERID=33
 
-if true; then
+if false; then
     $SQL <<EOF
     drop database fresta2;
 EOF
@@ -36,7 +36,7 @@ fi
 
 echo "fresta2 setup"
 
-PYTHONPATH=/home/arndt/moped/moped/ python <<EOF
+PYTHONPATH=~/moped/ python <<EOF
 from suds.client import Client
 url='http://localhost:9990/moped/pws?wsdl'
 client = Client(url)
